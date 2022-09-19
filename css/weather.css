@@ -7,6 +7,12 @@
   left: 15px;
 }
 .githubLink {
+  position: relative;
+  display: block;
+
+  left: 10%;
+}
+#codeLink {
   text-decoration: none;
 }
 .city {
