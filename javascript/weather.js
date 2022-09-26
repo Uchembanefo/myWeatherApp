@@ -36,8 +36,10 @@ function enterCity(Event) {
   let currentDate = document.querySelector(".currentDate");
   let hours = now.getHours();
   let minutes = now.getMinutes();
-  if (hours < 10 && minutes < 10) {
+  if (hours < 10) {
     hours = `0${hours}`;
+  }
+  if (minutes < 10) {
     minutes = `0${minutes}`;
   }
   currentDate.innerHTML = day + " " + hours + ":" + minutes;
