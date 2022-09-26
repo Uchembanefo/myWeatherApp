@@ -54,6 +54,11 @@ ul {
   display: block;
   margin-left: 47%;
 }
+.measurements {
+  position: relative;
+  display: block;
+  margin-top: 5%;
+}
 .degWind {
   position: relative;
   display: block;
@@ -68,15 +73,15 @@ ul {
 .temperature {
   position: relative;
   display: block;
-  margin-top: -31%;
-  margin-left: 35%;
+  margin-top: -36%;
+  margin-left: 40%;
   font-size: 35px;
 }
 
 .celsius {
   position: relative;
   display: block;
-  margin-left: 60%;
+  margin-left: 64%;
   margin-top: -27%;
   text-decoration: none;
   color: black;
@@ -84,7 +89,7 @@ ul {
 .fahreinheit {
   position: relative;
   display: block;
-  margin-left: 70%;
+  margin-left: 74%;
   margin-top: -14%;
   text-decoration: none;
   color: black;

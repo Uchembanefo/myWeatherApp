@@ -1,7 +1,7 @@
 function getCityWeather(result) {
   console.log(result);
   let temperature = document.querySelector(".temperature");
-  temperature.innerHTML = `${Math.round(result.data.main.temp)}°C`;
+  temperature.innerHTML = `${Math.round(result.data.main.temp)}`;
   let humidity = document.querySelector(".humidity");
   humidity.innerHTML = `${Math.round(result.data.main.humidity)}%`;
   let wind = document.querySelector(".degWind");
@@ -12,6 +12,11 @@ function getCityWeather(result) {
   bangor.innerHTML = result.data.name;
   let country = document.querySelector(".uk");
   country.innerHTML = result.data.sys.country;
+  let weatherIcon = document.querySelector(".weatherImage");
+  weatherIcon.setAttribute(
+    "src",
+    ` http://openweathermap.org/img/wn/${result.data.weather[0].icon}.png`
+  );
 }
 
 function enterCity(Event) {
