@@ -65,6 +65,31 @@ ul {
   margin-left: 85%;
   margin-top: -15%;
 }
+.temperature {
+  position: relative;
+  display: block;
+  margin-top: -31%;
+  margin-left: 35%;
+  font-size: 35px;
+}
+
+.celsius {
+  position: relative;
+  display: block;
+  margin-left: 60%;
+  margin-top: -27%;
+  text-decoration: none;
+  color: black;
+}
+.fahreinheit {
+  position: relative;
+  display: block;
+  margin-left: 70%;
+  margin-top: -14%;
+  text-decoration: none;
+  color: black;
+}
+
 footer {
   position: relative;
   margin-top: 5%;
