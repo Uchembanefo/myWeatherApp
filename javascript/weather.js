@@ -86,16 +86,17 @@ function changeToFahreinheit(event) {
   let temperature = document.querySelector(".temperature");
   let fahreinheit = (celsiusTemp * 9) / 5 + 32;
   temperature.innerHTML = `${Math.round(fahreinheit)}`;
-  celsius.classList.remove("active");
-  fahreinheit.classList.Add("active");
+
+  degreeFahreinheit.classList.add("active");
+  degreeCelsius.classList.remove("active");
 }
 
 function changeToCelsius(event) {
   event.preventDefault();
   let temperature = document.querySelector(".temperature");
   temperature.innerHTML = `${celsiusTemp}`;
-  celsius.classList.Add("active");
-  fahreinheit.classList.remove("active");
+  degreeCelsius.classList.add("active");
+  degreeFahreinheit.classList.remove("active");
 }
 
 let form = document.querySelector(".cities");
@@ -103,8 +104,8 @@ form.addEventListener("submit", enterCity);
 let currentCity = document.querySelector(".city");
 currentCity.addEventListener("click", currentWeather);
 let celsiusTemp = null;
-let degreeFahreinheit = document.querySelector(".fahreinheit");
+let degreeFahreinheit = document.querySelector("#fahreinheit");
 degreeFahreinheit.addEventListener("click", changeToFahreinheit);
 
-let degreeCelsius = document.querySelector(".celsius");
+let degreeCelsius = document.querySelector("#celsius");
 degreeCelsius.addEventListener("click", changeToCelsius);

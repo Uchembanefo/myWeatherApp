@@ -78,23 +78,32 @@ ul {
   font-size: 35px;
 }
 
-.celsius {
+#celsius {
   position: relative;
   display: block;
   margin-left: 64%;
   margin-top: -27%;
   text-decoration: none;
-  color: black;
-}
-.fahreinheit {
-  position: relative;
-  display: block;
-  margin-left: 74%;
-  margin-top: -14%;
-  text-decoration: none;
-  color: black;
 }
 
+#fahreinheit {
+  position: relative;
+  display: block;
+  margin-left: 78%;
+  margin-top: -14.5%;
+  text-decoration: none;
+}
+.slash {
+  position: relative;
+  display: block;
+  margin-left: 75%;
+  margin-top: -14%;
+}
+
+.active {
+  color: black;
+  cursor: default;
+}
 footer {
   position: relative;
   margin-top: 5%;
