@@ -1,3 +1,27 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  return `${day} ${hours}:${minutes}`;
+}
+
 function getCityWeather(result) {
   console.log(result);
   celsiusTemp = `${Math.round(result.data.main.temp)}`;
@@ -18,31 +42,14 @@ function getCityWeather(result) {
     "src",
     ` http://openweathermap.org/img/wn/${result.data.weather[0].icon}.png`
   );
+
+  let currentDate = document.querySelector(".currentDate");
+  currentDate.innerHTML = formatDate(result.data.dt * 1000);
 }
 
 function enterCity(Event) {
   Event.preventDefault();
-  let now = new Date();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[now.getDay()];
-  let currentDate = document.querySelector(".currentDate");
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  currentDate.innerHTML = day + " " + hours + ":" + minutes;
+
   let searchBox = document.querySelector(".typeCity");
   let bangor = document.querySelector(".bangor");
   bangor.innerHTML = searchBox.value;
@@ -75,11 +82,13 @@ function currentWeather(Event) {
   let currentDate = document.querySelector(".currentDate");
   let hours = now.getHours();
   let minutes = now.getMinutes();
-  if (hours < 10 && minutes < 10) {
+  if (hours < 10) {
     hours = `0${hours}`;
+  }
+  if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  currentDate.innerHTML = day + " " + hours + ":" + minutes;
+  currentDate.innerHTML = `${day} + " " + ${hours} + ":" + ${minutes}`;
   navigator.geolocation.getCurrentPosition(presentPosition);
 }
 
