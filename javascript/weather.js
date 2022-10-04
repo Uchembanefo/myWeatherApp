@@ -68,7 +68,6 @@ function presentPosition(position) {
 }
 function currentWeather(Event) {
   Event.preventDefault();
-
   navigator.geolocation.getCurrentPosition(presentPosition);
 }
 
