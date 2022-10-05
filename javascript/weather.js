@@ -89,15 +89,15 @@ function getCityForecast(forecast) {
     ` http://openweathermap.org/img/wn/${weekday[32].weather[0].icon}.png`
   );
   let wedTemp = document.querySelector(".wedTemp");
-  wedTemp.innerHTML = `${Math.round(weekday[0].main.temp)}`;
+  wedTemp.innerHTML = `${Math.round(weekday[0].main.temp)}°`;
   let thuTemp = document.querySelector(".thuTemp");
-  thuTemp.innerHTML = `${Math.round(weekday[8].main.temp)}`;
+  thuTemp.innerHTML = `${Math.round(weekday[8].main.temp)}°`;
   let friTemp = document.querySelector(".friTemp");
-  fri.innerHTML = `${Math.round(weekday[16].main.temp)}`;
+  fri.innerHTML = `${Math.round(weekday[16].main.temp)}°`;
   let satTemp = document.querySelector(".satTemp");
-  satTemp.innerHTML = `${Math.round(weekday[24].main.temp)}`;
+  satTemp.innerHTML = `${Math.round(weekday[24].main.temp)}°`;
   let sunTemp = document.querySelector(".sunTemp");
-  sunTemp.innerHTML = `${Math.round(weekday[32].main.temp)}`;
+  sunTemp.innerHTML = `${Math.round(weekday[32].main.temp)}°`;
   wednesday(weekday[0].dt);
   thursday(weekday[8].dt);
   friday(weekday[16].dt);

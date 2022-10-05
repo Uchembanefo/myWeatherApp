@@ -117,7 +117,7 @@ div.container {
   padding-top: 5%;
   border-style: ridge;
   margin-top: 5%;
-  border-color: rgb(37, 158, 37);
-  box-shadow: rgb(37, 158, 37);
+  border-color: black;
+  box-shadow: grey;
   background: purple;
 }
